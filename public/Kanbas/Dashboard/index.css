@@ -1,0 +1,14 @@
+.col {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.card-img-top {
+    height: 150px;
+}
+
+.card-title {
+    text-decoration: none;
+    color: navy;
+    font-weight: bold;
+}
