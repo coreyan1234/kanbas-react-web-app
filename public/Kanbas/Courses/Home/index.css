@@ -1,0 +1,20 @@
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.color-red {
+    color: red;
+}
+
+/* For styling '> Modules' in the breadcrumb bar */
+div div span span {
+    color: black;
+}
+
+.breadcrumb-bar {
+
+}
