@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/Kanbas/styles.css" />
         <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
         <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
@@ -27,13 +28,13 @@
                 </ul>
             </div>
             <div class="wd-flex-grow-1">
-                <div class="wd-flex-row-container justify-content-between top-buttons">
+                <div class="wd-flex-row-container justify-content-between d-none d-md-block top-buttons">
                     <span class="color-red">
                         <i class="fa fa-bars"></i>CS4550.12631.202410<span>> Modules</span>
                     </span>
                     <button ><i class="fa fa-glasses"></i>Student View</button>
                 </div>
-                <hr>
+                <hr class="d-none d-md-block top-buttons">
                 <div class="wd-flex-row-container">
                     <div class="d-flex d-none d-md-block">
                         <ul class="wd-navigation">
@@ -60,7 +61,59 @@
                     </div>
                     <div class="flex-fill wd-flex-grow-1">
                         <div class="d-block d-sm-block d-md-none">
-                            <div class="d-flex text-center">
+                            <div class="d-flex justify-content-between bg-dark">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    <i class="fa fa-bars text-white"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex text-center text-white">
+                                    CS4550.12631.202410<br>
+                                    Modules
+                                </div>
+                                <div>
+                                    <i class="fa fa-glasses text-white"></i>
+                                    <i class="fa fa-chevron-down text-white"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end top-buttons">
+                                <button>Collapse All</button>
+                                <button>View Progress</button>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle publish-all-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-check text-success"></i>
+                                        Publish All
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item active">Publish All</a></li>
+                                        <li><a href="#" class="dropdown-item">Another</a></li>
+                                    </ul>
+                                </div>
+                                <button class="bg-danger text-white">+ Module</button>
+                                <button><i class="fa fa-ellipsis-v ms-2"></i></button>
+                            </div>
+                            <!-- <div class="d-flex text-center">
                                 <i class="fa fa-bars"></i>
                                 <p>
                                     CS4550.12631.202410<br>
@@ -71,24 +124,26 @@
                                     <i class="fa fa-chevron-right pull-right"></i>
                                     <i class="fa fa-chevron-down pull-right"></i>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="d-flex justify-content-end top-buttons">
-                            <button>Collapse All</button>
-                            <button>View Progress</button>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle publish-all-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-check text-success"></i>
-                                    Publish All
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item active">Publish All</a></li>
-                                    <li><a href="#" class="dropdown-item">Another</a></li>
-                                </ul>
+                        <div class="d-none d-md-block d-sm-none">
+                            <div class="d-flex justify-content-end top-buttons ">
+                                <button>Collapse All</button>
+                                <button>View Progress</button>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle publish-all-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-check text-success"></i>
+                                        Publish All
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item active">Publish All</a></li>
+                                        <li><a href="#" class="dropdown-item">Another</a></li>
+                                    </ul>
+                                </div>
+                                <button class="bg-danger text-white">+ Module</button>
+                                <button><i class="fa fa-ellipsis-v ms-2"></i></button>
                             </div>
-                            <button class="bg-danger text-white">+ Module</button>
-                            <button><i class="fa fa-ellipsis-v ms-2"></i></button>
                         </div>
                         <hr >
                         <div class="flex-fill wd-modules">
