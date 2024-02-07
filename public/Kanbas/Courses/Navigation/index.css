@@ -2,7 +2,7 @@
     background-color: white;
     list-style: none;
     padding: 0px;
-    width: 150px;
+    width: 180px;
     margin: 0px;
     margin-left: 20px;
 }
@@ -26,4 +26,13 @@
 .wd-navigation a {
     color: red;
     text-decoration: none;
+}
+
+ul li i{
+    margin-right: 5px;
+}
+
+.exit-icon a i{
+    color: red;
+    font-size: 30px;
 }
