@@ -1,0 +1,12 @@
+.breadcrumb {
+    --bs-breadcrumb-divider: ">";
+}
+
+.text-overflow {
+    white-space: nowrap; /* Prevent text from wrapping onto multiple lines */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Display an ellipsis (...) to indicate truncated text */
+    color: gray;
+    font-size: 4mm;
+    font-style: italic;
+}
