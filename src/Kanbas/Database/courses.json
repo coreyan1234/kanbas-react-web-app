@@ -22,37 +22,5 @@
     "startDate": "2024-01-10",
     "endDate": "2024-05-15",
     "image": "web_dev.png"
-  },
-  {
-    "_id": "RS104",
-    "name": "HCI",
-    "number": "IS4300",
-    "startDate": "2024-01-10",
-    "endDate": "2024-05-15",
-    "image": "HCI.jpg"
-  },
-  {
-    "_id": "RS105",
-    "name": "Psychology",
-    "number": "PSYC1101",
-    "startDate": "2024-01-10",
-    "endDate": "2024-05-15",
-    "image": "psychology.webp"
-  },
-  {
-    "_id": "RS106",
-    "name": "Jazz",
-    "number": "MUSC1112",
-    "startDate": "2024-01-10",
-    "endDate": "2024-05-15",
-    "image": "Jazz.jpg"
-  },
-  {
-    "_id": "RS107",
-    "name": "Object-Oriented Design",
-    "number": "CS3500",
-    "startDate": "2024-01-10",
-    "endDate": "2024-05-15",
-    "image": "OOD.png"
   }
 ]

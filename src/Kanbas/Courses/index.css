@@ -10,3 +10,21 @@
     font-size: 4mm;
     font-style: italic;
 }
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.top-buttons * {
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 5px;
+}
+.top-buttons > button > *{
+    border: none;
+}
