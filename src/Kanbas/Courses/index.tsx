@@ -21,9 +21,6 @@ function Courses() {
           <ul className="breadcrumb">
             <li className="breadcrumb-item" style={{ color: "red" }}><HiMiniBars3 /> Course {course?.name}</li>
             <li className="breadcrumb-item">{courseNavBreadcrumb}</li>
-            {/* <div className="wd-flex-row-container top-buttons">
-              <button style={{fontSize: "20px"}}><FaGlasses className="ms-2"/> Student View</button>
-            </div> */}
           </ul>
         </h1>
         <div className="top-buttons">
