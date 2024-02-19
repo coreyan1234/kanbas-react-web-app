@@ -16,21 +16,28 @@ function Courses() {
   
   return (
     <div>
-      <h1 style={{fontSize: "30px"}}>
-        <ul className="breadcrumb">
-          <li className="breadcrumb-item" style={{ color: "red" }}><HiMiniBars3 /> Course {course?.name}</li>
-          <li className="breadcrumb-item">{courseNavBreadcrumb}</li>
-          <div className="wd-flex-row-container top-buttons">
-            <button style={{fontSize: "20px"}}><FaGlasses className="ms-2"/> Student View</button>
-          </div>
-        </ul>
-      </h1>
+      <div className="wd-flex-row-container justify-content-between">
+        <h1 style={{fontSize: "30px"}}>
+          <ul className="breadcrumb">
+            <li className="breadcrumb-item" style={{ color: "red" }}><HiMiniBars3 /> Course {course?.name}</li>
+            <li className="breadcrumb-item">{courseNavBreadcrumb}</li>
+            {/* <div className="wd-flex-row-container top-buttons">
+              <button style={{fontSize: "20px"}}><FaGlasses className="ms-2"/> Student View</button>
+            </div> */}
+          </ul>
+        </h1>
+        <div className="top-buttons">
+          <button style={{fontSize: "20px"}}><FaGlasses className="ms-2"/> Student View</button>
+        </div>
+      </div>
       <hr />
-      <div>
-        <CourseNavigation />
-        <div>
+      <div className="wd-flex-row-container">
+        <div className="d-flex d-none d-md-block">
+          <CourseNavigation />
+        </div>
+        <div className="flex-fill">
           <div
-            className="overflow-y-scroll position-fixed bottom-0 end-0"
+            // className="overflow-y-scroll position-fixed bottom-0 end-0"
             style={{ left: "320px", top: "100px" }} >
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
