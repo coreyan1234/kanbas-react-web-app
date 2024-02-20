@@ -1,0 +1,52 @@
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.color-red {
+    color: red;
+}
+
+/* For styling '> Modules' in the breadcrumb bar */
+div div span span {
+    color: black;
+}
+
+.unpublish-button {
+    border: none;
+}
+.published-button {
+    color: white;
+    background-color: green;
+    border: none;
+}
+
+.stacked-buttons {
+    display: flex;
+    flex-direction: column;
+}
+.stacked-buttons div {
+    margin-bottom: 3px;
+}
+.stacked-buttons button.button {
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}
+.stacked-buttons button.button:hover {
+    background-color: gray; /* Darker background color on hover */
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.small-text {
+    color: gray;
+    font-size: small;
+}
