@@ -1,4 +1,4 @@
-import { FaBell, FaBullhorn, FaChartArea, FaChartBar, FaCrosshairs, FaFileImport } from "react-icons/fa";
+import { FaBars, FaBell, FaBullhorn, FaChartArea, FaChartBar, FaChevronDown, FaCrosshairs, FaFileImport, FaGlasses } from "react-icons/fa";
 import ModuleList from "../Modules/List";
 import "./index.css";
 
@@ -36,26 +36,40 @@ function Home() {
 
   return (
     <div>
-      <h2>Home</h2>
-      <ModuleList />
-      <h2>Course Status</h2>
-      <div className="wd-flex-grow-1">
-        <div className="wd-flex-row-container">
-            <div className="flex-grow-0 me-2 d-none d-lg-block">
-                <h5>Course Status</h5>
-                <div className="wd-flex-row-container">
-                    <button className="col unpublish-button"><i className="fa fa-ban"></i> Unpublish</button>
-                    <button className="col published-button"><i className="fa fa-circle-check"></i> Published</button>
+        <div className="d-block d-sm-block d-md-none">
+            {/* Hamburger + Chevron */}
+            <div className="d-flex justify-content-between bg-black" style={{alignItems: "center"}}>
+                <a href="/Kanbas/Navigation/index_hamburger.html"><FaBars className="text-white"/></a>
+                <div className="d-flex text-center text-white">
+                    CS4550.12631.202410
+                    <br />
+                    Modules
                 </div>
-                <br />
-                <div className="stacked-buttons">
-                    { buttons.map((button) => (
-                        <div><button className="button">{button.icon} {button.description}</button></div>
-                    ))}
+                <a href="/Kanbas/Courses/Navigation/index_chevron.html" className="text-white">
+                    <FaGlasses />
+                    <FaChevronDown />
+                </a>
+            </div>
+        </div>
+        <div className="wd-flex-row-container">
+            <ModuleList />
+            <div className="wd-flex-row-container">
+                <div className="flex-grow-0 me-2 d-none d-lg-block" style={{paddingLeft: "25px"}}>
+                    <h5>Course Status</h5>
+                    <div className="wd-flex-row-container">
+                        <button className="col unpublish-button"><i className="fa fa-ban"></i> Unpublish</button>
+                        <button className="col published-button"><i className="fa fa-circle-check"></i> Published</button>
+                    </div>
+                    <br />
+                    <div className="stacked-buttons">
+                        { buttons.map((button) => (
+                            <div><button className="button">{button.icon} {button.description}</button></div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
+        
     </div>
   );
 }
