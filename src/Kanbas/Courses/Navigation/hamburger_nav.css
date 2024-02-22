@@ -1,0 +1,41 @@
+/* Hamburger Styling */
+.hamburger-kanbas-navigation {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 125px;
+    height: 100%;
+}
+
+.hamburger-kanbas-navigation li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.hamburger-kanbas-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
+.hamburger-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+    display: block;
+    margin-right: 10px;
+}
+
+.hamburger-kanbas-navigation .wd-account a i {
+    color: gray;
+    font-size: 2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+ul li a {
+    color: red;
+}

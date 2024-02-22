@@ -4,6 +4,8 @@ import "./index.css";
 // import ChevronNav from "../Navigation/chevron_nav";
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import ChevronNav from "../Navigation/chevron_nav";
+import { useState } from "react";
+import HamburgerNav from "../Navigation/hamburger_nav";
 
 function Home() {
     const buttons = [
@@ -37,25 +39,49 @@ function Home() {
         }
     ]
 
+    const [chevronCollapsed, setChevronCollapsed] = useState(true);
+    const [hamburgerCollapsed, setHamburgerCollapsed] = useState(true);
+    const toggleChevron = () => {
+        setChevronCollapsed(!chevronCollapsed);
+    };
+    const toggleHamburger = () => {
+        setHamburgerCollapsed(!hamburgerCollapsed);
+    }
     return (
         <div>
             <div className="d-block d-sm-block d-md-none">
                 {/* Hamburger + Chevron */}
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
                 <div className="d-flex justify-content-between bg-black" style={{alignItems: "center"}}>
-                    <a href="/Kanbas/Navigation/index_hamburger.html"><FaBars className="text-white"/></a>
+                    <p>
+                        <button onClick={toggleHamburger} className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHamburger" aria-expanded="false" aria-controls="collapseHamburger">
+                            <FaBars className="text-white"/>
+                        </button>
+                    </p>
+                    {/* <a href="/Kanbas/Navigation/index_hamburger.html"><FaBars className="text-white"/></a> */}
                     <div className="d-flex text-center text-white">
                         CS4550.12631.202410
                         <br />
                         Modules
                     </div>
-                    {/* <Link to={<ChevronNav/>} className="text-white" style={{float: "right"}}>
-                        <FaGlasses />
-                        <FaChevronDown />
-                    </Link> */}
-                    {/* <a href="/Kanbas/Courses/Navigation/index_chevron.html" className="text-white">
-                        <FaGlasses />
-                        <FaChevronDown />
-                    </a> */}
+                    <p className="d-inline-flex gap-1">
+                        <button onClick={toggleChevron} className="btn btn-primary" type="button" aria-expanded={!chevronCollapsed} aria-controls="collapseChevron">
+                            <FaGlasses />
+                            <FaChevronDown />
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div style={{minHeight: "120px"}}>
+                <div className={`collapse collapse-horizontal ${hamburgerCollapsed ? '' : 'show'}`} id="collapseHamburger">
+                    <div className="card card-body" style={{width: "300px"}}>
+                        <HamburgerNav />
+                    </div>
+                </div>
+            </div>
+            <div className={`collapse ${chevronCollapsed ? '' : 'show '}`} id="collapseChevron">
+                <div className="card card-body">
+                    <ChevronNav />
                 </div>
             </div>
             <div className="wd-flex-row-container">
