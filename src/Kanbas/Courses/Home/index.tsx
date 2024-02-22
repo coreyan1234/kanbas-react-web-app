@@ -50,38 +50,32 @@ function Home() {
     return (
         <div>
             <div className="d-block d-sm-block d-md-none">
-                {/* Hamburger + Chevron */}
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
                 <div className="d-flex justify-content-between bg-black" style={{alignItems: "center"}}>
-                    <p>
-                        <button onClick={toggleHamburger} className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHamburger" aria-expanded="false" aria-controls="collapseHamburger">
-                            <FaBars className="text-white"/>
-                        </button>
-                    </p>
-                    {/* <a href="/Kanbas/Navigation/index_hamburger.html"><FaBars className="text-white"/></a> */}
+                    <button onClick={toggleHamburger} className="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHamburger" aria-expanded="false" aria-controls="collapseHamburger">
+                        <FaBars className="text-white"/>
+                    </button>
                     <div className="d-flex text-center text-white">
                         CS4550.12631.202410
                         <br />
                         Modules
                     </div>
-                    <p className="d-inline-flex gap-1">
-                        <button onClick={toggleChevron} className="btn btn-primary" type="button" aria-expanded={!chevronCollapsed} aria-controls="collapseChevron">
-                            <FaGlasses />
-                            <FaChevronDown />
-                        </button>
-                    </p>
+                    <button onClick={toggleChevron} className="btn" type="button" aria-expanded={!chevronCollapsed} aria-controls="collapseChevron">
+                        <FaGlasses className="text-white"/>
+                        <FaChevronDown className="text-white"/>
+                    </button>
                 </div>
             </div>
-            <div style={{minHeight: "120px"}}>
-                <div className={`collapse collapse-horizontal ${hamburgerCollapsed ? '' : 'show'}`} id="collapseHamburger">
-                    <div className="card card-body" style={{width: "300px"}}>
+            {/* Hamburger + Chevron */}
+            <div>
+                <div className={`collapse ${hamburgerCollapsed ? '' : 'show'}`} id="collapseHamburger">
+                    <div className="card card-body">
                         <HamburgerNav />
                     </div>
                 </div>
-            </div>
-            <div className={`collapse ${chevronCollapsed ? '' : 'show '}`} id="collapseChevron">
-                <div className="card card-body">
-                    <ChevronNav />
+                <div className={`collapse ${chevronCollapsed ? '' : 'show '}`} id="collapseChevron">
+                    <div className="card card-body">
+                        <ChevronNav />
+                    </div>
                 </div>
             </div>
             <div className="wd-flex-row-container">
