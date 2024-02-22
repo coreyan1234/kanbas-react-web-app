@@ -1,8 +1,9 @@
 import { FaBars, FaBell, FaBullhorn, FaChartArea, FaChartBar, FaChevronDown, FaCrosshairs, FaFileImport, FaGlasses } from "react-icons/fa";
 import ModuleList from "../Modules/List";
 import "./index.css";
+// import ChevronNav from "../Navigation/chevron_nav";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import ChevronNav from "../Navigation/chevron_nav";
-import { Link } from "react-router-dom";
 
 function Home() {
     const buttons = [
@@ -47,14 +48,14 @@ function Home() {
                         <br />
                         Modules
                     </div>
-                    <Link to={<ChevronNav />} className="text-white" style={{float: "right"}}>
+                    {/* <Link to={<ChevronNav/>} className="text-white" style={{float: "right"}}>
                         <FaGlasses />
                         <FaChevronDown />
-                    </Link>
-                    <a href="/Kanbas/Courses/Navigation/index_chevron.html" className="text-white">
+                    </Link> */}
+                    {/* <a href="/Kanbas/Courses/Navigation/index_chevron.html" className="text-white">
                         <FaGlasses />
                         <FaChevronDown />
-                    </a>
+                    </a> */}
                 </div>
             </div>
             <div className="wd-flex-row-container">
