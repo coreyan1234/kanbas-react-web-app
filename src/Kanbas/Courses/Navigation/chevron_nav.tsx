@@ -17,7 +17,6 @@ import {
   FaRegEyeSlash,
   FaRocket,
   FaSpinner,
-  FaTimes,
   FaUsers,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
