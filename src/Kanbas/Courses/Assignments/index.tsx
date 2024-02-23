@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCaretDown, FaCaretRight, FaCheckCircle, FaClipboardCheck, FaClipboardList, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
+import { FaCaretDown, FaCheckCircle, FaClipboardList, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 import "./index.css"

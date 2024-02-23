@@ -7,7 +7,6 @@ import "./index.css"
 import { FaGlasses } from "react-icons/fa";
 import Home from "./Home";
 import Assignments from "./Assignments";
-import ChevronNav from "./Navigation/chevron_nav";
 
 function Courses() {
   const { courseId } = useParams();

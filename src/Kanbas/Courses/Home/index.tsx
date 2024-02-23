@@ -1,8 +1,6 @@
-import { FaBars, FaBell, FaBullhorn, FaChartArea, FaChartBar, FaChevronDown, FaCrosshairs, FaFileImport, FaGlasses } from "react-icons/fa";
+import { FaBars, FaBell, FaBullhorn, FaChartBar, FaChevronDown, FaCrosshairs, FaFileImport, FaGlasses } from "react-icons/fa";
 import ModuleList from "../Modules/List";
 import "./index.css";
-// import ChevronNav from "../Navigation/chevron_nav";
-import { Link, Navigate, Route, Routes } from "react-router-dom";
 import ChevronNav from "../Navigation/chevron_nav";
 import { useState } from "react";
 import HamburgerNav from "../Navigation/hamburger_nav";

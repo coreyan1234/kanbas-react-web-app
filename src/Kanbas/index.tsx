@@ -2,7 +2,6 @@ import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard"
 import Courses from "./Courses";
-import ChevronNav from "./Courses/Navigation/chevron_nav";
 
 function Kanbas() {
   return (

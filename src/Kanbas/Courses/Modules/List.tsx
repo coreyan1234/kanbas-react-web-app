@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./index.css";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaRegCheckCircle, FaArrowDown, FaChevronDown, FaCaretDown, FaCaretRight } from "react-icons/fa";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaRegCheckCircle, FaCaretDown, FaCaretRight } from "react-icons/fa";
 import { useParams } from "react-router";
 
 function ModuleList() {

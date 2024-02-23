@@ -1,12 +1,8 @@
-import { FaArrowRight, FaBook, FaCalendar, FaEnvelopeOpen, FaQuestion, FaQuestionCircle, FaRegClock, FaTachometerAlt, FaTv, FaUser } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
-import { courses } from "../../Database";
+import { FaArrowRight, FaBook, FaCalendar, FaEnvelopeOpen, FaQuestionCircle, FaRegClock, FaTachometerAlt, FaTv, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./hamburger_nav.css";
 
 function HamburgerNav() {
-    const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
-
     return (
         <div className="wd-flex-row-container">
             <div>
