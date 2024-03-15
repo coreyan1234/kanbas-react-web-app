@@ -8,14 +8,13 @@ import { FaGlasses } from "react-icons/fa";
 import Home from "./Home";
 import Assignments from "./Assignments";
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   let courseNavBreadcrumb = useLocation().pathname.split("/").pop()
   if (courseNavBreadcrumb) {
     courseNavBreadcrumb = decodeURIComponent(courseNavBreadcrumb)
   }
-  
   return (
     <div>
       {/* breadcrumb */}
