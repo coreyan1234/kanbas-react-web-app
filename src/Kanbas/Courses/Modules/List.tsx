@@ -20,34 +20,6 @@ function ModuleList() {
     state.modulesReducer.module);
   const dispatch = useDispatch();
   const [selectedModule, setSelectedModule] = useState(moduleList[0]);
-//   const [moduleList, setModuleList] = useState<any[]>(modules);
-//   const [module, setModule] = useState({
-//     _id: "L101",
-//     name: "New Module",
-//     description: "New Description",
-//     course: courseId,
-//   });
-//   const addModule = (module: any) => {
-//     const newModule = { ...module,
-//       _id: new Date().getTime().toString()};
-//     const newModuleList = [newModule, ...moduleList];
-//     setModuleList(newModuleList);
-//   };
-//   const deleteModule = (moduleId: string) => {
-//     const newModuleList = moduleList.filter(
-//       (module) => module._id !== moduleId );
-//     setModuleList(newModuleList);
-//   };
-//   const updateModule = () => {
-//     const newModuleList = moduleList.map((m) => {
-//       if (m._id === module._id) {
-//         return module;
-//       } else {
-//         return m;
-//       }
-//     });
-//     setModuleList(newModuleList);
-//   };
   return (
     <>
         <div className="flex-fill">
@@ -62,24 +34,24 @@ function ModuleList() {
                 <button><FaEllipsisV className="ms-2" /></button>
             </div>
             <hr ></hr>
-            <li className="list-group-item">
-                <div className="d-flex">
+            <li className="list-group-item wd-flex-row-container">
+                <div className="d-flex flex-column">
                     <input value={module.name}
                         onChange={(e) => 
                             dispatch(setModule({ ...module, name: e.target.value }))
                         }/>
-                    <button onClick={() => dispatch(updateModule(module))}>
-                        Update
-                    </button>
-                    <button onClick={() => { dispatch(addModule({ ...module, course: courseId })) }}>
-                        Add
-                    </button>
-                </div>
-                <div>
                     <textarea value={module.description}
                         onChange={(e) => 
                             dispatch(setModule({ ...module, description: e.target.value }))
                         }/>
+                </div>
+                <div>
+                    <button onClick={() => dispatch(updateModule(module))} className="update-btn">
+                        Update
+                    </button>
+                    <button onClick={() => { dispatch(addModule({ ...module, course: courseId })) }} className="add-btn">
+                        Add
+                    </button>
                 </div>
             </li>
             <ul className="list-group wd-modules">
@@ -93,11 +65,11 @@ function ModuleList() {
                         <FaEllipsisV className="me-2" />
                         <FaCaretRight />
                         {module.name}
-                        <button onClick={() => dispatch(setModule(module))}>
-                            Edit
-                        </button>
-                        <button onClick={() => dispatch(deleteModule(module._id))}>
+                        <button onClick={() => dispatch(deleteModule(module._id))} className="delete-btn">
                             Delete
+                        </button>
+                        <button onClick={() => dispatch(setModule(module))} className="edit-btn">
+                            Edit
                         </button>
                         <span className="float-end">
                             <FaCheckCircle className="text-success" />
